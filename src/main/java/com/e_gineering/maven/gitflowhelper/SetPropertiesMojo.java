@@ -106,7 +106,7 @@ public class SetPropertiesMojo extends AbstractGitflowBranchMojo {
      * Added to the beginning of any property key which is set or loaded by this plugin.
      */
     @Parameter(property = "keyPrefix", defaultValue = "")
-    private String keyPrefix = "";
+    private final String keyPrefix = "";
 
 
     @Override
@@ -162,6 +162,7 @@ public class SetPropertiesMojo extends AbstractGitflowBranchMojo {
                     try {
                         fis.close();
                     } catch (IOException ioe) {
+                        getLog().debug("exception ignored", ioe);
                     }
                     fis = null;
                 }

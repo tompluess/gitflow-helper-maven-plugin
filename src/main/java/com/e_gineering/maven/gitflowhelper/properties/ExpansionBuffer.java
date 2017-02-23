@@ -48,6 +48,7 @@ public class ExpansionBuffer {
         return key;
     }
 
+    @Override
     public String toString() {
         return resolved.append(unresolved).toString();
     }

@@ -35,6 +35,8 @@ public class PromoteMasterMojo extends AbstractGitflowBasedRepositoryMojo {
 
                 break;
             }
+            default:
+                // nop.
         }
     }
 }

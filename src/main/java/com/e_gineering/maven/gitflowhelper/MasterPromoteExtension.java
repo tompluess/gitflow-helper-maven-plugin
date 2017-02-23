@@ -147,6 +147,7 @@ public class MasterPromoteExtension extends AbstractMavenLifecycleParticipant {
         try {
             return ((Xpp3Dom) configuration).getChild(parameter).getValue();
         } catch (Exception ex) {
+            logger.debug("exception ignored", ex);
         }
         return null;
     }

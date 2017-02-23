@@ -301,7 +301,9 @@ public abstract class AbstractGitflowBasedRepositoryMojo extends AbstractGitflow
             if (reader != null) {
                 try {
                     reader.close();
-                } catch (IOException ioe) {}
+                } catch (IOException ioe) {
+                    getLog().debug("exception ignored", ioe);
+                }
             }
         }
 
